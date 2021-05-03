@@ -1,0 +1,46 @@
+<div class="form-container">
+
+  <form #contatosForm="ngForm" (ngSubmit)="onSubmit(contatosForm)">
+
+    <div class="field">
+      <label class="label">Nome</label>
+      <div class="control">
+        <input type="text" name="nome" [ngModel]="contato.nome" required class="input">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Telefone</label>
+      <div class="control">
+        <input type="text" name="tel" [ngModel]="contato.tel" required class="input">
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">E-mail</label>
+      <div class="control">
+        <input type="text" name="email" [ngModel]="contato.email" required class="input">
+      </div>
+    </div>
+
+
+    <div class="field">
+      <label class="label">Comentários</label>
+      <div class="control">
+
+        <textarea name="obs" [ngModel]="contato.obs" class="textarea"></textarea>
+      </div>
+    </div>
+
+    <div class="field is-grouped is-pulled-right">
+      <div class="control">
+        <button class="button is-text" type="button" (click)="cancelar()">Cancelar</button>
+      </div>
+      <div class="control">
+        <button class="button is-success" type="submit" [disabled]="!contatosForm.valid">Confirmar</button>
+      </div>
+    </div>
+
+  </form>
+
+</div>

@@ -1,0 +1,43 @@
+// alterando variaveis do bulma e adicionando estilos globais
+
+@charset "utf-8";
+
+// Import a Google Font
+// @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+// Set your brand colors
+$moonlit:#203A43;
+$blck: #0F2027;
+$asteroid: #2C5364;
+
+$light-red: #fff3f3;
+
+$light: #fafcff;
+
+$green: #0bf387;
+
+// Update Bulma's global variables
+$family-sans-serif: 'Open Sans', sans-serif;
+$primary: $moonlit;
+$link: $asteroid;
+
+// Update some of Bulma's component variables
+$body-background-color: $light;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-background-color: #f3f5fa;
+$input-shadow: none;
+
+
+
+/* ESTILOS GLOBAIS */
+
+html, body {
+  height: 100%;
+
+  // tamanho padrao da fonte 18px
+  font-size: 18px !important;
+
+  overflow: hidden !important;
+}

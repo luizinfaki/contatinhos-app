@@ -1,0 +1,28 @@
+<div class="main-container">
+
+  <div class="search-bar-container">
+    <div class="field">
+      <p class="control has-icons-left">
+        <input #filtrarInput class="input" type="text" (keyup)="filtrar($event.target.value)" placeholder="Busca">
+        <span class="icon is-small is-left">
+          <i class="fas fa-search"></i>
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <div class="lista-contatos" [@listaAnim]>
+    <app-card-contato
+    *ngFor="let contato of contatosFiltrados;"
+    [link]="gerarContatoURL(contato)"
+    [@itemAnim]
+    (excluir)="excluirContato(contato)"
+    [nome]="contato.nome" 
+    [tel]="contato.tel" 
+    [email]="contato.email"></app-card-contato>
+  </div>
+
+  <button class="button add-button is-primary" routerLink="novo">+</button>
+
+
+</div>

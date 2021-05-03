@@ -1,0 +1,25 @@
+<div #container class="card-contato-container">
+
+  <a [routerLink]="link">
+
+
+    <div class="card-contato-content">
+
+      <div class="card-contato-nome">
+        <h1>{{ nome }}</h1>
+      </div>
+      
+      <div class="card-contato-info">
+
+        <div class="card-contato-tel"><i class="fas fa-phone-alt"></i> {{ tel }}</div>
+
+        <div class="card-contato-email"><i class="fas fa-envelope"></i> {{ email }}</div>
+
+      </div>
+
+    </div>
+  </a>
+
+  <div class="botao-x" (click)="cliqueBotaoX()"></div>
+  
+</div>
